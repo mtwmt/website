@@ -1,0 +1,42 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html *, html *:before, html *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body { font-size: 16px; font-size: 1rem; line-height: 20px; line-height: 1.25rem; font-family: "Century Gothic", "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU", "sans-serif", "serif"; }
+
+html, body { -webkit-overflow-scrolling: touch; }
+
+#start { position: relative; z-index: 5; width: 100%; height: 100%; background: #546; }
+
+#go { position: relative; width: 100%; height: 100%; background: #ffc; }
+
+#go1 { position: relative; width: 100%; height: 100%; top: 0px; left: 0px; background: #fcc; }
+
+#slide { position: relative; top: 300%; left: 0px; width: 100%; height: 100%; background: #159; }
+
+.box { position: absolute; top: 200px; right: 100px; border: 1px solid #000; width: 200px; height: 300px; overflow: hidden; }
+
+.menu { position: relative; font-size: 20px; font-size: 1.25rem; line-height: 30px; line-height: 1.875rem; }
+
+.circle { position: relative; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; width: 200px; height: 200px; }
+.circle.c1 { background: #159; }
+.circle.c2 { background: #444; }
+.circle.c3 { background: #653; }
+.circle.c4 { background: #a57; }
+
+/*# sourceMappingURL=test.css.map */

@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="zh-TW">
 
 <head>
@@ -19,34 +19,24 @@
 <body>
     <div class="container">
         <header id="header">
-            <h1><a href="index.html">Mandy's Web</a></h1>
-            
-            <nav>
+            <h1><a href="#">Mandy's Collections</a></h1>
+            <!-- <div class="hamburger"><i></i></div> -->
+            <!-- <nav>
                 <ul>
                     <li><a href="#">Profile</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-            </nav>
-
-        </header>
-        
-        <div class="wrapper">
-            ABOUT ME
-            <div class="hamburger"><i></i></div>
+            </nav> -->
             
-        </div>
+        </header>
+        <ul class="sidebar">
+            <!-- load json data -->
+        </ul>
         <div class="subwrapper">
-            <main id="main">  
-                <section class="">
-                    作品集
-                    <span class="d1"></span>
-                    <span class="d2"></span>
-                    <span class="h1"></span>
-                    <span class="h2"></span>
-                </section>
-                <section class="">
-                    聯絡我
+            <main id="main">
+                <section class="timeline">
+                    <!-- load json data -->
                 </section>
             </main>
             <footer id="footer">
@@ -54,7 +44,7 @@
             </footer>
         </div>
     </div>
-    
+    <div class="loadbar"></div>
 </body>
 
 </html>
@@ -62,46 +52,3 @@
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
-<script>
-$(function(){
-
-    var startDate = new Date();
-    var endDate = new Date(" 2016/3/31 12:03:00");
-    var spantime = (endDate - startDate)/1000;
- 
-    function cal(){
-        spantime --;
-        var d = Math.floor(spantime / (24 * 3600));
-        var h = Math.floor((spantime % (24*3600))/3600);
-        var m = Math.floor((spantime % 3600)/(60));
-        var s = Math.floor(spantime%60);
-        str = d + "天 " + h + "时 " + m + "分 " + s + "秒 ";
-
-        var d1 = Math.floor( d/10 );
-        var d2 = Math.floor( d%10 );
-        var h1 = Math.floor( h/10 );
-        var h2 = Math.floor( h%10 );
-        var m1 = Math.floor( m/10 );
-        var m2 = Math.floor( m%10 );
-        var s1 = Math.floor( s/10 );
-        var s2 = Math.floor( s%10 );
-
-        console.log( d1 );
-        console.log( d2 );
-        console.log( h1 );
-        console.log( h2 );
-        console.log( m1 );
-        console.log( m2 );
-        console.log( s1 );
-        console.log( s2 );
-        console.log( s2 );
-        
-       $(".d1").text(d1);
-       $(".d2").text(d2);
-       $(".h1").text(h1);
-       $(".h2").text(h2);
-    }
-    cal();
-
-});
-</script>

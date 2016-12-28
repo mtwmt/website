@@ -1,0 +1,74 @@
+$white:#fff;
+
+$susy:( 
+	columns:24, 
+	math:fluid, 
+	gutters:1, 
+	gutter-position:inside,
+	debug: (
+		// image: show,
+	),
+);
+
+$gutter:20px;
+
+$font-list: 14px,16px,18px,20px;
+$base-font-size: nth($font-list, 1);
+$base-line-height: 10px;
+$min-line-padding: 2px;
+$rhythm-unit: 'rem';
+
+
+
+$base-font-size:16px;
+//Compass px to em
+@function em($target, $context: $base-font-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0rem;
+}
+
+
+$devices: (
+    phone     : 640px,
+    pad       : 960px,
+    pc        : 1200px,
+);
+
+// @include susy-breakpoint( max-width map-get($devices, pad)){}
+
+%inline-outer {
+  letter-spacing: -4px; //可能需要微調
+  // word-spacing: -4px;
+  font-size: 0;
+}
+
+%inline-inner {
+  letter-spacing: normal; //可能需要微調
+  // word-spacing: normal;
+  display:inline-block;
+  *display: inline;
+  zoom:1;
+}
+
+@mixin hamburger( $color, $iconW){
+	
+	position:absolute;display: block;cursor: pointer;
+	width:$iconW;height:$iconW/6;background: $color;
+	margin: $iconW/3 0;
+	&:before{
+		content: "";
+		position:absolute;top:-$iconW/3;left:0;
+		display:block;
+		width:$iconW;height:$iconW/6;
+		background: $color;
+	}
+	&:after{
+		@include transition(transform 0.5s);
+		content: "";
+		position:absolute;top:$iconW/3;left:0;
+		display:block;
+		width:$iconW;height:$iconW/6;
+		background: $color;
+		@include transition(transform 0.5s);
+	}
+}

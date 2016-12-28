@@ -1,0 +1,84 @@
+html,body{
+	width:100%; height:100%;font-family: "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU", "sans-serif", "serif";
+	// overflow: hidden;
+}
+
+*, *:after, *:before {@include box-sizing(border-box);}
+img {width:100%;max-width: 100%;line-height: 0;}
+
+
+
+// @include susy-breakpoint( map-get($devices, pc)){
+// 	.container{
+// 		@include container(1200px);
+// 	}
+// }
+
+
+
+
+a{
+	color:#444;text-decoration: none;
+	&:hover{color:#52b0d5;}
+}
+
+.hamburger{
+	@include user-select(none);
+	i{
+		
+		@include transform(rotate(0deg));
+		@include transition(transform 0.5s);
+		@include hamburger( #fff, 30px);
+	}
+	&.active{
+		i{
+			@include transform(rotate(180deg));
+			&:before {
+	            @include transform(translateY(rhythm(3) * 0.35) rotate(45deg));
+	        }
+	        &:after {
+	            @include transform(translateY(rhythm(3) * -0.35) rotate(135deg));
+	        }
+        }
+	}
+}
+
+.container{position: relative;}
+
+#header{
+	position: relative;z-index: 999;
+	padding:0px 10px;
+	line-height:rhythm(3);
+	color:#fff;background:#222;
+	a{color:#fff;}
+	h1{display: inline-block;}
+	nav{
+		float:right;
+		ul li{
+			margin:0px 10px;display: inline-block;
+		}
+	}
+}
+
+.wrapper{
+	width:100%;height:100%;overflow: hidden;
+	background:rgba(#159,0.7);
+}
+
+.subwrapper{
+	position: absolute;bottom: -100%;
+	width:100%;height:100%;background: #fff;
+	#main{overflow: auto;}
+}
+
+@include susy-breakpoint( map-get($devices, phone)){
+	
+}
+@include susy-breakpoint( map-get($devices, pad)){
+	
+	
+}
+
+@include susy-breakpoint( map-get($devices, pc)){
+	
+}

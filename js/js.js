@@ -35,7 +35,9 @@ var pageAct = function(){
     $win.on('scroll',function(){
         var $this = $(this),
             st = $win.scrollTop(),
+            ww = $win.width(),
             wh = $win.height(),
+            total_h = $('#main').offset().top + $('#main').height() - wh;
             idx = 0;
 
         $cont.each(function(index, el) {
@@ -61,23 +63,8 @@ var pageAct = function(){
             }
         });
 
-        // $('.loadbar').css({
-        //     width: $(document).height() / $(document).width()
-        // });
-
-        percent = $(window).height() / $(document).height();
-        scrollbarH = $(window).height() * percent;
-        scrollbar = $(document).height() * percent;
-        // laodW = $(window).scrollTop() * percent;
-
-        loadW = $(window).width();
-        lading = scrollbar / $(window).scrollTop() * loadW;
-
-        console.log( percent , scrollbarH,scrollbar  , lading);
-        // console.log( $(document).height() , $(window).height() , $(window).height() / $(document).height(), );  
-        // console.log( getElementsByAttribute('document').height )
-
-
+        // 讀取條
+        $('.loadbar').css({ width: st / total_h*100 + '%' });
 
     }).scroll();
 
@@ -89,9 +76,7 @@ var pageAct = function(){
 
 var getPage = function(){
     $.ajax({
-        // url: 'https://dl.dropboxusercontent.com/u/42184515/mtwmt/json/data.json',
         url:'json/data.json',
-
         method: 'get',
         dataType: 'json',
         data: {},
@@ -232,6 +217,4 @@ var flicker = {
 
 $(function(){
     flicker.init("h1",1,15, 50);
-  // flicker.init("p",1,15,50);
-  
 });

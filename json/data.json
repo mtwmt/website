@@ -3,6 +3,30 @@
     "year": 2016,
     "into": [
       {
+        "title": "AOC",
+        "img": "images/2016_aoc.jpg",
+        "link": "http://us.aoc.com/",
+        "description": "FOR RWD"
+      },
+      {
+        "title": "奧古斯塔",
+        "img": "images/2016_mvagusta.jpg",
+        "link": "http://www.mvagusta.com.tw/",
+        "description": "FOR RWD"
+      },
+      {
+        "title": "台灣髓緣之友協會",
+        "img": "images/2016_tbmta.jpg",
+        "link": "http://www.tbmta.org.tw/",
+        "description": "FOR RWD"
+      },
+      {
+        "title": "地所",
+        "img": "images/2016_chi.jpg",
+        "link": "http://www.chisho-design.com/",
+        "description": "for RWD"
+      },
+      {
         "title": "永慶APP下載頁",
         "img": "images/2016_ycapp.jpg",
         "link": "http://www.yungching.com.tw/app",

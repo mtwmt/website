@@ -1,4 +1,5 @@
 // edit by Mandy@2015
+// mail:mtwmt@hotmail.com
 // 201609 更新 資料改用josn讀取
 
 $(window).load(function(){

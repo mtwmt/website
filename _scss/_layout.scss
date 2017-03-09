@@ -8,40 +8,11 @@ img {width:100%;max-width: 100%;line-height: 0;}
 
 
 
-// @include susy-breakpoint( map-get($devices, pc)){
-// 	.container{
-// 		@include container(1200px);
-// 	}
-// }
-
-
-
-
 a{
 	color:#444;text-decoration: none;
 	&:hover{color:#52b0d5;}
 }
 
-.hamburger{
-	@include user-select(none);
-	i{
-		
-		@include transform(rotate(0deg));
-		@include transition(transform 0.5s);
-		@include hamburger( #fff, 30px);
-	}
-	&.active{
-		i{
-			@include transform(rotate(180deg));
-			&:before {
-	            @include transform(translateY(rhythm(3) * 0.35) rotate(45deg));
-	        }
-	        &:after {
-	            @include transform(translateY(rhythm(3) * -0.35) rotate(135deg));
-	        }
-        }
-	}
-}
 
 .container{position: relative;}
 
@@ -59,12 +30,6 @@ a{
 		}
 	}
 }
-
-.wrapper{
-	width:100%;height:100%;overflow: hidden;
-	background:rgba(#159,0.7);
-}
-
 .subwrapper{
 	position: absolute;bottom: -100%;
 	width:100%;height:100%;background: #fff;

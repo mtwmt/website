@@ -35,15 +35,3 @@ a{
 	width:100%;height:100%;background: #fff;
 	#main{overflow: auto;}
 }
-
-@include susy-breakpoint( map-get($devices, phone)){
-	
-}
-@include susy-breakpoint( map-get($devices, pad)){
-	
-	
-}
-
-@include susy-breakpoint( map-get($devices, pc)){
-	
-}

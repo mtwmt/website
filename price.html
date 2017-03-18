@@ -80,3 +80,24 @@
 	</div>
 </body>
 </html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+	
+	var $table = $('table'),
+		i = 0;
+		arr = [];
+
+		$table.eq(0).find('th').each(function(){
+			arr.push( $(this).html() );
+		});
+
+		for(i; i< $table.find('tr').length; i++){
+			$('table tr').eq(i).find('td').each(function(index){
+				$(this).attr('data-th',arr[index] );				
+			});
+		}
+
+
+
+
+</script>

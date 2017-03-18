@@ -11,3 +11,22 @@ table caption{line-height:50px;font-size:20px;font-weight:bold;}
 table th{background:#EFEFEF;}
 table th,
 table td{padding:13px 5px;text-align:center;border:1px solid #DDDDDD;}
+
+@include susy-breakpoint(max-width map-get($devices, phone)){
+	table{
+		th{display: none;}
+		td{
+			display: block;
+			text-align: left;
+			padding: 0px;
+			&:before{
+				content: attr(data-th)'';
+				display: inline-block;
+				background: #EEE;
+				padding:10px 20px;
+				margin-right: 20px;
+			}
+		}
+			
+	}
+}

@@ -12,7 +12,7 @@ table th{background:#EFEFEF;}
 table th,
 table td{padding:13px 5px;text-align:center;border:1px solid #DDDDDD;}
 
-@include susy-breakpoint(max-width map-get($devices, phone)){
+@include susy-breakpoint(max-width map-get($devices, pad)){
 	table{
 		th{display: none;}
 		td{

@@ -45,7 +45,7 @@ table th { background: #EFEFEF; }
 
 table th, table td { padding: 13px 5px; text-align: center; border: 1px solid #DDDDDD; }
 
-@media (max-width: 640px) { table th { display: none; }
+@media (max-width: 960px) { table th { display: none; }
   table td { display: block; text-align: left; padding: 0px; }
   table td:before { content: attr(data-th) ""; display: inline-block; background: #EEE; padding: 10px 20px; margin-right: 20px; } }
 

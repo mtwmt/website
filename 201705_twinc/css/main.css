@@ -43,7 +43,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .pt_word p { margin-bottom: 1.875rem; font-size: 18px; font-size: 1.125rem; line-height: 30px; line-height: 1.875rem; }
 .pt_pruduct { overflow: hidden; *zoom: 1; }
 .pt_pruduct.col12r { margin-right: 4.16667%; }
-.pt_pruduct.col12r ul li { width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; margin-bottom: 0; }
+.pt_pruduct.col12r ul li { width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; margin-bottom: 0; padding: 0 0.625rem; }
 .pt_pruduct.col12r figure { margin-bottom: 1.25rem; }
 .pt_pruduct h3 { margin-left: 0.625rem; }
 .pt_pruduct ul li { float: left; width: 20%; padding: 0 1.25rem; margin-bottom: 3.75rem; }

@@ -29,8 +29,6 @@ var pageAct = function(){
         $('html,body').stop().animate({           
             scrollTop : idx > 0 ? $cont.eq(idx).offset().top - 50 : 0
         });
-
-        console.log(idx);
     });
 
     $win.on('scroll',function(){
@@ -105,21 +103,6 @@ var tmp_year = function(datalist){
         );
     };
     return templateArr.join('');
-    // createTemp = function(data) {
-    //     templateArr.push(
-    //         data
-    //     );
-    // },
-    // getTemp = function(tag){
-    //     for( i; i< datalist.length; i++ ){
-    //         createTemp(datalist[i].year);
-    //     };
-    //     return templateArr;
-    // };
-    // return {
-    //     createTemp : createTemp,
-    //     getTemp : getTemp
-    // }
 };
 
 var tmp_timeline = function(datalist){

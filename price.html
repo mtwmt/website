@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="Title" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Description" content="" />
+    <title>報價單</title>
+    <link rel="stylesheet" href="css/price.css" />
+    <!--[if (lt IE 9) & (!IEMobile)]>
+	    <script src="js/html5shiv.min.js" type="text/javascript"></script>
+	    <script src="js/respond.js" type="text/javascript"></script>
+	<!--<![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149155162-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-149155162-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="index.html">Mandy's <span>Portfolio</span></a>
+      </h1>
+      <nav class="social">
+        <ul>
+          <!-- <li><a class="btn" href="price.html">報價單</a></li> -->
+          <!-- <li>
+            <label id="switch" class="switch">
+              <input type="checkbox" id="switch-slider" />
+              <span class="switch-slider round"></span>
+            </label>
+          </li> -->
+          <li><a class="btn" href="//mtwmt.github.io/" target="_blank">Blog</a></li>
+          <li><a class="btn" href="//github.com/mtwmt" target="_blank">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <p>跟Mandy聯絡：mtwmt@hotmail.com</p>
+      <table>
+        <caption>
+          切版報價
+        </caption>
+        <tr>
+          <th width="20%">分類</th>
+          <th width="20%">價格</th>
+          <th width="20%">工時</th>
+          <th width="40%">備註</th>
+        </tr>
+        <tr>
+          <td>一般頁面切版</td>
+          <td>2500 ~ 5000 / 頁 up</td>
+          <td>1~3天 / 頁</td>
+          <td>基本html、css</td>
+        </tr>
+        <tr>
+          <td>自適應網頁切版(RWD)</td>
+          <td>3500 ~ 6000 / 頁</td>
+          <td>2~3天 / 頁</td>
+          <td>基本html、css切版 / 包含手機、PAD、電腦版</td>
+        </tr>
+      </table>
+      <table>
+        <caption>
+          互動式需求
+        </caption>
+        <tr>
+          <th width="20%">分類</th>
+          <th width="20%">價格</th>
+          <th width="20%">工時</th>
+          <th width="40%">備註</th>
+        </tr>
+        <tr>
+          <td>動態頁面 / 效果</td>
+          <td>500 ~ 3000 頁</td>
+          <td>1 ~ 2天 / 頁</td>
+          <td>圖片輪播、燈箱效果、頁籤切換、滑動到指定位置等JS效果</td>
+        </tr>
+      </table>
+      <table>
+        <caption>
+          其他需求
+        </caption>
+        <tr>
+          <th width="20%">分類</th>
+          <th width="20%">價格</th>
+          <th width="20%">工時</th>
+          <th width="40%">備註</th>
+        </tr>
+        <!-- <tr>
+          <td>SCSS交付</td>
+          <td>3000～15000/專案</td>
+          <td>5~10 天/專案</td>
+          <td>交付scss檔案，以每次案子計價</td>
+        </tr> -->
+        <tr>
+          <td>急件需求</td>
+          <td>專案總費用＊1.5</td>
+          <td>專案總時程＊0.7</td>
+          <td></td>
+        </tr>
+      </table>
+      <ol>
+        <li>使用DIV+CSS製作HTML 相容於IE10以上 chrome firefox 瀏覽器不破版</li>
+        <li>以上皆不含設計費用！</li>
+      </ol>
+    </main>
+  </body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+  var $table = $('table'),
+    i = 0;
+  arr = [];
+
+  $table
+    .eq(0)
+    .find('th')
+    .each(function () {
+      arr.push($(this).html());
+    });
+
+  for (i; i < $table.find('tr').length; i++) {
+    $('table tr')
+      .eq(i)
+      .find('td')
+      .each(function (index) {
+        $(this).attr('data-th', arr[index]);
+      });
+  }
+</script>
+<!-- <script src="js/switch.js"></script> -->

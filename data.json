@@ -7,7 +7,7 @@
         "images": "images/2020_maskmap.jpg",
         "link": "https://mtwmt.github.io/maskmap/",
         "device": "RWD",
-        "description": "因為 NOVID-19 (武漢病毒) 造成了全世界的罩慌，使得口罩供不應求，口罩地圖也因此而產生"
+        "description": "因為 NOVID-19 (武漢病毒) 造成了全世界的罩慌，使得口罩供不應求，口罩地圖也因此而產生。此專案使用 Angular 框架"
       }
     ]
   },

@@ -1,0 +1,142 @@
+@import "./assets/varable";
+@import "./assets/theme";
+
+@mixin timeline($theme-config) {
+  $config: get-color-config($theme-config, theme);
+  $primary: color($config, primary);
+  $accent: color($config, accent);
+  $warn: color($config, warn);
+  $theme: color($config, theme);
+
+  $timeline-bg: color($theme, timeline-bg);
+
+  .timeline {
+    position: relative;
+    padding: $unit * 2;
+    margin-top: $unit * 6;
+    margin-left: $unit * 2;
+    max-width: rem(480px);
+    transition: 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: rem(5px);
+      background: $timeline-bg;
+    }
+
+    &__item {
+      @extend %clearfix;
+    }
+
+    &__item-year {
+      position: relative;
+      margin-bottom: $unit * 4;
+      padding: $unit;
+      max-width: 6em;
+      text-align: center;
+      font-size: rem(18px);
+      font-family: "Dosis";
+      color: color($primary, default-contrast);
+      transition: 0.3s;
+      background: $timeline-bg;
+      border-radius: 5px;
+
+      border: 2px solid darken($timeline-bg, 10%);
+      // color: darken($timeline-bg, 10%);
+      box-shadow: 2px 2px 0 darken($timeline-bg, 10%);
+    }
+
+    &__item-content {
+      padding: $unit;
+      position: relative;
+      margin-top: $unit * 2;
+      margin-right: $unit * 4;
+      margin-bottom: $unit * 8;
+      margin-left: $unit * 6;
+
+      background: $timeline-bg;
+      border-radius: 4px;
+      // box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.2);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: $unit * -2;
+        top: $unit * 2;
+        width: 0;
+        height: 0;
+        border-top: $unit * 2 solid $timeline-bg;
+        border-left: $unit * 2 solid transparent;
+      }
+
+      // &-icon {
+      //   position: absolute;
+      //   left: 0;
+      //   top: $unit*2;
+      //   display: inline-block;
+      //   width: 16px;
+      //   height: 16px;
+      //   background-color: darken($timeline-bg, 50%);
+      //   border-radius: 50%;
+      //   // transform: translateX($unit * -6);
+      // }
+    }
+
+    @include pc {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      // padding-left: 0;
+      padding: 0 $unit * 7;
+
+      &:before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &__item-year {
+        margin: 0 auto $unit * 4;
+      }
+
+      &__item-content {
+        width: 40%;
+        // margin-left: 0;
+        // margin-right: 0;
+        margin-left: $unit * 4;
+        margin-right: $unit * 4;
+
+        &:nth-child(odd) {
+          float: right;
+          // margin-left: rem(5px);
+          margin-top: $unit * 6;
+        }
+
+        &:nth-child(even) {
+          float: left;
+          &:before {
+            border-top: $unit * 2 solid $timeline-bg;
+            border-right: $unit * 2 solid transparent;
+            right: $unit * -2;
+            left: auto;
+          }
+        }
+
+        // &:nth-of-type(2n + 1) {
+        //   clear: both;
+        // }
+      }
+
+      // &__item-content:nth-child(odd) &__item-content-icon {
+      //   // transform: translateX($unit * -9.5);
+      // }
+
+      // &__item-content:nth-child(even) &__item-content-icon {
+      //   left: auto;
+      //   right: 0;
+      //   // transform: translateX($unit * 9.5);
+      // }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import './assets/theme';
+@import './assets/varable';
+@import './layout';
+@import './header';
+@import './timeline';
+@import './card';
+@import './navigation';
+@import './button';
+@import './switch';
+
+$light-theme: light-theme($primary-palette, $secondary-palette);
+$dark-theme: dark-theme($primary-palette, $secondary-palette);
+
+@mixin layout($theme-config, $density: null) {
+  $config: get-color-config($theme-config, $density);
+  $primary: color($config, primary);
+  $secondary: color($config, accent);
+  $warn: color($config, warn);
+  $theme: color($config, theme);
+
+  html,
+  body {
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Noto Sans TC', 'Arial', '\5FAE\8EDF\6B63\9ED1\9AD4', '\65B0\7D30\660E\9AD4', 'sans-serif';
+    color: color($theme, text);
+    background-color: color($theme, background);
+    font-size: 16px;
+    * {
+      box-sizing: border-box;
+    }
+  }
+
+  main {
+    position: relative;
+  }
+
+  .loadbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: color($primary);
+  }
+
+  #gotop {
+    position: fixed;
+    bottom: $unit * 8;
+    right: $unit * 2;
+    opacity: 0;
+    transition: 0.3s;
+    .btn {
+      width: $unit * 5;
+      height: $unit * 5;
+
+      &:before,
+      &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        margin-left: rem(-4px);
+        border-radius: rem(3px);
+        content: '';
+        width: rem(16px);
+        height: rem(5px);
+        background: color($primary);
+      }
+      &:after {
+        transform: translate(-50%, -50%) rotate(45deg);
+        margin-left: rem(4px);
+      }
+
+    }
+  }
+
+  @include header($theme-config);
+  @include button($theme-config);
+  @include timeline($theme-config);
+  @include navigation($theme-config);
+  @include card($theme-config);
+  @include switch($theme-config);
+}
+
+@include layout($light-theme);
+.is-dark {
+  @include layout($dark-theme, 'is-dark');
+}

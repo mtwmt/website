@@ -1,0 +1,27 @@
+@import "./assets/varable";
+@import './assets/theme';
+
+@mixin navigation($theme-config) {
+  $config: get-color-config($theme-config ,theme);
+  $primary: color($config, primary);
+  $accent: color($config, accent);
+  $warn: color($config, warn);
+  $theme: color($config, theme);
+
+  .navigation {
+    position: fixed;
+    z-index: 999;
+    top: rem(120px);
+    right: $unit * 3;
+
+    &__item {
+      color: color($theme, disabled);
+      line-height: 2;
+      font-family: 'Dosis';
+      cursor: pointer;
+      &--active {
+        color: color($theme, text);
+      }
+    }
+  }
+}

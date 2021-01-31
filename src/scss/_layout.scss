@@ -1,0 +1,30 @@
+@import './assets/theme';
+@import './assets/varable';
+@import 'https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700';
+@import './assets/reset';
+@import './assets/common';
+
+$unit: rem(8px);
+
+
+// Typography
+$base-font: helvetica, arial, tahoma, verdana;
+$base-font-title: 'Dosis', arial, tahoma, verdana;
+
+// Timeline
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+$device-list: 320px 360px 400px 440px 480px 520px 560px 600px 640px;
+@each $current-device in $device-list {
+  @media screen and (min-width: $current-device) {
+    body,
+    html {
+      font-size: $current-device * 0.025;
+    }
+  }
+}

@@ -5,7 +5,7 @@
   const windowHeight = $win.height();
   const headerHeight = $('header').outerHeight(true);
   const $navigation = $('.navigation');
-  $gotop;
+  const $gotop = $('#gotop');
   let $timelineItem;
   let $nav;
 

@@ -18,12 +18,12 @@ const merge = require('merge-stream');
 
 const ghPages = require('gulp-gh-pages');
 
-function build() {
-  return src(['dist/**/*'])
-    .pipe(ghPages())
+function deploy() {
+  return src('./dist/**/*')
+  .pipe(ghPages())
 }
 
-exports.build = build;
+exports.deploy = deploy;
 
 
 function img() {

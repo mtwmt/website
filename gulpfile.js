@@ -16,6 +16,15 @@ const sourcemaps = require('gulp-sourcemaps');
 const spritesmith = require('gulp.spritesmith');
 const merge = require('merge-stream');
 
+const ghPages = require('gulp-gh-pages');
+
+function build() {
+  return src(['dist/**/*'])
+    .pipe(ghPages())
+}
+
+exports.build = build;
+
 
 function img() {
   return src(['src/images/img/**/!(_)*.png','src/images/img/**/!(_)*.jpg'])
